@@ -11,6 +11,8 @@ public class BinToRanConverter {
         boolean finished = false;
         int count=0;
 
+
+        // fzzlidkbgdlzkjvblk
         DataInputStream dataIS = new DataInputStream(new FileInputStream(readFile));
 
 
