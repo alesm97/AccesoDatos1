@@ -13,7 +13,7 @@ public class Ejercicio09 {
 
         boolean finished = false;
         int menu,contact=0;
-        File read = new File("C:\\Users\\alesm97\\IdeaProjects\\AccesoDatos1erTrimestre\\src\\prueba8\\phonebook.txt");
+        File read = new File("C:\\Users\\alesm97\\IdeaProjects\\AccesoDatos1erTrimestre\\src\\prueba8\\phonebookA.txt");
         RandomAccessFile random = null;
 
         try {
@@ -32,8 +32,8 @@ public class Ejercicio09 {
 
 
         do{
-            System.out.printf("¿Qué desea hacer?\n\t1.- Consultar fichero entero.\n\t2.-Consultar contacto por id.\n\t3.- Añadir contacto.\n\t4.- Eliminar contacto\n\t5.- Modificar si debe dinero y la cantidad.\n\t6.- Salir.\n");
-            menu=Teclado.leerEntre(1,5, Teclado.Incluido.TODOS, Teclado.Tipos.INT);
+            System.out.printf("¿Qué desea hacer?\n\t1.- Consultar fichero entero.\n\t2.- Consultar contacto por id.\n\t3.- Añadir contacto.\n\t4.- Eliminar contacto\n\t5.- Modificar si debe dinero y la cantidad.\n\t6.- Compactar.\n\t7.- Salir");
+            menu=Teclado.leerEntre(1,7, Teclado.Incluido.TODOS, Teclado.Tipos.INT);
             switch(menu){
                 case 1:
                     showAllContacts();
@@ -59,19 +59,24 @@ public class Ejercicio09 {
 
     }
 
-    private static void modifyDebt(int contact) {
-    }
+    private static void showAllContacts() {
+        while(true){
 
-    private static void deleteContact(int contact) {
-    }
-
-    private static void addContact() {
+        }
     }
 
     private static void showContact(int contact) {
     }
 
-    private static void showAllContacts() {
+    private static void addContact() {
+    }
+
+    private static void deleteContact(int contact) {
+    }
+
+    private static void modifyDebt(int contact) {
+
+
     }
 
 }
