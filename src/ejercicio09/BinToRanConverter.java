@@ -1,5 +1,6 @@
 package ejercicio09;
 
+
 import java.io.*;
 
 public class BinToRanConverter {
@@ -11,11 +12,7 @@ public class BinToRanConverter {
         boolean finished = false;
         int count=0;
 
-
-        // fzzlidkbgdlzkjvblk
         DataInputStream dataIS = new DataInputStream(new FileInputStream(readFile));
-
-
 
         while(!finished){
             random.write(++count);
