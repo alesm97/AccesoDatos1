@@ -22,7 +22,7 @@ public class Ejercicio09 {
             e.printStackTrace();
         }
 
-        System.out.printf("Creando archivo aleatorio a partir del binario.");
+        System.out.printf("Creando archivo aleatorio a partir del binario.\n");
 
         try {
             BinToRanConverter.makeFileChar(random,read);
@@ -32,14 +32,15 @@ public class Ejercicio09 {
 
 
         do{
-            System.out.printf("¿Qué desea hacer?\n\t1.- Consultar fichero entero.\n\t2.-Consultar contacto por id.\n\t3.- Añadir contacto.\n\t4.- Eliminar contacto\n\t5.- Modificar si le debo dinero y la cantidad.\n");
+            System.out.printf("¿Qué desea hacer?\n\t1.- Consultar fichero entero.\n\t2.-Consultar contacto por id.\n\t3.- Añadir contacto.\n\t4.- Eliminar contacto\n\t5.- Modificar si debe dinero y la cantidad.\n\t6.- Salir.\n");
             menu=Teclado.leerEntre(1,5, Teclado.Incluido.TODOS, Teclado.Tipos.INT);
             switch(menu){
                 case 1:
                     showAllContacts();
                     break;
                 case 2:
-                    System.out.printf("");
+                    System.out.printf("Introduzca el identificador del contacto:\n");
+                    Teclado.leerNumero(Teclado.Tipos.INT);
                     showContact(contact);
                     break;
                 case 3:
@@ -51,6 +52,8 @@ public class Ejercicio09 {
                 case 5:
                     modifyDebt(contact);
                     break;
+                case 6:
+                    finished = true;
             }
         }while(!finished);
 

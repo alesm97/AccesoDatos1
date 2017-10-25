@@ -11,40 +11,71 @@ public class BinToRanConverter {
         boolean finished = false;
         int count=0;
 
-
-        // fzzlidkbgdlzkjvblk
         DataInputStream dataIS = new DataInputStream(new FileInputStream(readFile));
 
+        while(true){
 
+            try{
+                //write the id
+                random.write(++count);
 
-        while(!finished){
-            random.write(++count);
+                //write if its deleted
+                random.writeBoolean(dataIS.readBoolean());
 
-            string = dataIS.readUTF();
+                //write the name
+                string = dataIS.readUTF();
+                writeString(random, string, 15);
 
-            for(int i = 0; i <string.length(); i++){
-                random.writeChar(string.charAt(i));
+                //write the phonenumber
+                string = dataIS.readUTF();
+                writeString(random,string,9);
+
+                //write the address
+                string = dataIS.readUTF();
+                writeString(random,string,30);
+
+                //write postal code
+                random.write(dataIS.read());
+
+                //write birthday
+                string = dataIS.readUTF();
+                writeString(random,string,10);
+
+                //write if it's a debtor
+                random.writeBoolean(dataIS.readBoolean());
+
+                //write the debt
+                random.writeDouble(dataIS.readDouble());
+
+            }catch(EOFException e){
             }
 
-            string = dataIS.readUTF();
-            for(int i = 0; i <string.length(); i++){
-                random.writeChar(string.charAt(i));
-            }
-
-            random.write(dataIS.read());
-            random.writeBoolean(dataIS.readBoolean());
-
-            string = dataIS.readUTF();
-            for(int i = 0; i <string.length(); i++){
-                random.writeChar(string.charAt(i));
-            }
-
-            random.writeDouble(dataIS.readDouble());
         }
 
 
 
 
 
+    }
+
+    private static void writeString(RandomAccessFile random, String string, int max) throws IOException {
+        if(string.length()<max){
+            for(int i = 0; i < string.length(); i++){
+                random.writeChar(string.charAt(i));
+            }
+
+            for(int i = max-string.length(); i < max; i++){
+                random.writeChar(' ');
+            }
+
+        }else if(string.length()==max){
+            for(int i = 0; i < string.length(); i++){
+                random.writeChar(string.charAt(i));
+            }
+        }else{
+            for(int i = 0; i < max; i++){
+                random.writeChar(string.charAt(i));
+            }
+        }
     }
 }
