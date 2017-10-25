@@ -1,6 +1,5 @@
 package ejercicio09;
 
-
 import java.io.*;
 
 public class BinToRanConverter {
@@ -14,34 +13,69 @@ public class BinToRanConverter {
 
         DataInputStream dataIS = new DataInputStream(new FileInputStream(readFile));
 
-        while(!finished){
-            random.write(++count);
+        while(true){
 
-            string = dataIS.readUTF();
+            try{
+                //write the id
+                random.write(++count);
 
-            for(int i = 0; i <string.length(); i++){
-                random.writeChar(string.charAt(i));
+                //write if its deleted
+                random.writeBoolean(dataIS.readBoolean());
+
+                //write the name
+                string = dataIS.readUTF();
+                writeString(random, string, 15);
+
+                //write the phonenumber
+                string = dataIS.readUTF();
+                writeString(random,string,9);
+
+                //write the address
+                string = dataIS.readUTF();
+                writeString(random,string,30);
+
+                //write postal code
+                random.write(dataIS.read());
+
+                //write birthday
+                string = dataIS.readUTF();
+                writeString(random,string,10);
+
+                //write if it's a debtor
+                random.writeBoolean(dataIS.readBoolean());
+
+                //write the debt
+                random.writeDouble(dataIS.readDouble());
+
+            }catch(EOFException e){
             }
 
-            string = dataIS.readUTF();
-            for(int i = 0; i <string.length(); i++){
-                random.writeChar(string.charAt(i));
-            }
-
-            random.write(dataIS.read());
-            random.writeBoolean(dataIS.readBoolean());
-
-            string = dataIS.readUTF();
-            for(int i = 0; i <string.length(); i++){
-                random.writeChar(string.charAt(i));
-            }
-
-            random.writeDouble(dataIS.readDouble());
         }
 
 
 
 
 
+    }
+
+    private static void writeString(RandomAccessFile random, String string, int max) throws IOException {
+        if(string.length()<max){
+            for(int i = 0; i < string.length(); i++){
+                random.writeChar(string.charAt(i));
+            }
+
+            for(int i = max-string.length(); i < max; i++){
+                random.writeChar(' ');
+            }
+
+        }else if(string.length()==max){
+            for(int i = 0; i < string.length(); i++){
+                random.writeChar(string.charAt(i));
+            }
+        }else{
+            for(int i = 0; i < max; i++){
+                random.writeChar(string.charAt(i));
+            }
+        }
     }
 }
