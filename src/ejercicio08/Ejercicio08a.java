@@ -12,12 +12,12 @@ public class Ejercicio08a {
                 phoneNumber1 = "123456", phonenumber2 = "654321", phonenumber3 = "21344898", phonenumber4 = "45778976", phonenumber5 = "789547668",
                 address1 = "calle 1", address2 = "calle 2", address3 = "calle 3", address4 = "calle 4", address5 = "calle 5";
         int postalCode1 = 11204, postalCode2 = 40211, postalCode3 = 58746, postalCode4 = 87965, postalCode5 = 85214;
-        boolean debtor1 = true, debtor2 = false, debtor3 = true, debtor4 = false, debtor5 = false;
+        boolean debtor1 = false, debtor2 = true, debtor3 = true, debtor4 = false, debtor5 = false;
         LocalDate birthday1 = LocalDate.of(2015, Month.AUGUST, 25), birthday2 = LocalDate.of(2019, Month.AUGUST, 18), birthday3 = LocalDate.of(2005, Month.JANUARY, 18), birthday4 = LocalDate.of(1987, Month.FEBRUARY, 5), birthday5 = LocalDate.of(1874, Month.APRIL, 18);
         double debt1 = 0, debt2 = 15.35, debt3 = 8754.45, debt4 = 0, debt5 = 0;
         boolean deleted1 = false, deleted2 = false, deleted3 = false, deleted4 = false, deleted5 = false;
 
-        File fileToWrite = new File("C:\\Users\\alesm97\\IdeaProjects\\AccesoDatos1erTrimestre\\src\\prueba8\\phonebookA.txt");
+        File fileToWrite = new File("C:\\Users\\alesm97\\IdeaProjects\\AccesoDatos1\\src\\prueba8\\phonebookA.txt");
         DataOutputStream dataOS = null;
         DataInputStream dataIS = null;
 
