@@ -1,0 +1,8 @@
+Comienzo del Documento XML
+ListaAgendaTelefonica
+Contacto -> | name: Alex | phoneNumber: (pre +34) 615101488 | address: (city Algeciras) VicenteAleixandre | postalCode: 11204 | debtor: false | deleted: false | birthday: 2014-04-25 | debt: (coin mexican dollar) 0.0
+Contacto -> | name: Nano | phoneNumber: (pre +35) 615584769 | address: (city Los Barrios) AlixandreVicente | postalCode: 11548 | debtor: true | deleted: false | birthday: 2014-04-25 | debt: (coin dollar) 14.56
+Contacto -> | name: Baldo | phoneNumber: (pre +36) 587964857 | address: (city San Roque) VicendreAlexante | postalCode: 54876 | debtor: false | deleted: false | birthday: 2014-04-25 | debt: (coin dollar) 0.0
+Contacto -> | name: G.G. | phoneNumber: (pre +37) 789587845 | address: (city La Linea) VixandreAlecinte | postalCode: 89746 | debtor: true | deleted: false | birthday: 2014-04-25 | debt: (coin pound) 4587.25
+Contacto -> | name: Eufrasio | phoneNumber: (pre +37) 786495216 | address: (city Palmones) Puente1 | postalCode: 1377 | debtor: true | deleted: false | birthday: 2014-04-25 | debt: (coin euro) 1458967.25
+Final del Documento XML
