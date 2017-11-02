@@ -3,12 +3,16 @@
     <CLASSES>
       <root url="file://$USER_HOME$/Google Drive/Desarrollo de aplicaciones/Segundo/Acc Datos/Librerias/xstream-distribution-1.4.10-bin/xstream-1.4.10" />
       <root url="file://$USER_HOME$/Google Drive/Desarrollo de aplicaciones/Segundo/Acc Datos/Librerias/xstream-distribution-1.4.10-bin/xstream-1.4.10/lib" />
+      <root url="file://$USER_HOME$/Google Drive/Desarrollo de aplicaciones/Segundo/Acc Datos/Librerias/xstream-distribution-1.4.10-bin/xstream-1.4.10/lib/xstream" />
+      <root url="file://$USER_HOME$/Google Drive/Desarrollo de aplicaciones/Segundo/Acc Datos/Librerias/xstream-distribution-1.4.10-bin/xstream-1.4.10/lib/xstream-hibernate" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="file://$USER_HOME$/Google Drive/Desarrollo de aplicaciones/Segundo/Acc Datos/Librerias/xstream-distribution-1.4.10-bin/xstream-1.4.10/lib" />
     </SOURCES>
     <jarDirectory url="file://$USER_HOME$/Google Drive/Desarrollo de aplicaciones/Segundo/Acc Datos/Librerias/xstream-distribution-1.4.10-bin/xstream-1.4.10/lib" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Google Drive/Desarrollo de aplicaciones/Segundo/Acc Datos/Librerias/xstream-distribution-1.4.10-bin/xstream-1.4.10/lib/xstream" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Google Drive/Desarrollo de aplicaciones/Segundo/Acc Datos/Librerias/xstream-distribution-1.4.10-bin/xstream-1.4.10/lib/xstream-hibernate" recursive="false" />
     <jarDirectory url="file://$USER_HOME$/Google Drive/Desarrollo de aplicaciones/Segundo/Acc Datos/Librerias/xstream-distribution-1.4.10-bin/xstream-1.4.10/lib" recursive="false" type="SOURCES" />
   </library>
 </component>

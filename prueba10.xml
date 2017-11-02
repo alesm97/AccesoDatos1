@@ -1,0 +1,52 @@
+<ListaAgendaTelefonica>
+  <DatosPersona>
+    <name>Alex</name>
+    <phoneNumber>615101488</phoneNumber>
+    <address>Vicente Aleixandre</address>
+    <postalCode>11204</postalCode>
+    <debtor>false</debtor>
+    <deleted>false</deleted>
+    <birthday>2014-04-25</birthday>
+    <debt>0.0</debt>
+  </DatosPersona>
+  <DatosPersona>
+    <name>Nano</name>
+    <phoneNumber>615584769</phoneNumber>
+    <address>Alixandre Vicente</address>
+    <postalCode>11548</postalCode>
+    <debtor>true</debtor>
+    <deleted>false</deleted>
+    <birthday>2014-04-25</birthday>
+    <debt>14.56</debt>
+  </DatosPersona>
+  <DatosPersona>
+    <name>Baldo</name>
+    <phoneNumber>587964857</phoneNumber>
+    <address>Vicendre Alexante</address>
+    <postalCode>54876</postalCode>
+    <debtor>false</debtor>
+    <deleted>false</deleted>
+    <birthday>2014-04-25</birthday>
+    <debt>0.0</debt>
+  </DatosPersona>
+  <DatosPersona>
+    <name>G.G.</name>
+    <phoneNumber>789587845</phoneNumber>
+    <address>Vixandre Alecinte</address>
+    <postalCode>89746</postalCode>
+    <debtor>true</debtor>
+    <deleted>false</deleted>
+    <birthday>2014-04-25</birthday>
+    <debt>4587.25</debt>
+  </DatosPersona>
+  <DatosPersona>
+    <name>Eufrasio</name>
+    <phoneNumber>786495216</phoneNumber>
+    <address>Puente 1</address>
+    <postalCode>1377</postalCode>
+    <debtor>true</debtor>
+    <deleted>false</deleted>
+    <birthday>2014-04-25</birthday>
+    <debt>1458967.25</debt>
+  </DatosPersona>
+</ListaAgendaTelefonica>
