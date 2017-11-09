@@ -5,12 +5,14 @@ import ejercicio08.PhonebookSer;
 
 import java.io.*;
 
-public class Main {
+public class Main10 {
 
     public static void main(String[] args) {
 
         ObjectInputStream dataIS=null;
         boolean done=false;
+        XStream xstream = new XStream();
+        PhoneBookList list = new PhoneBookList();
 
         try {
             dataIS = new ObjectInputStream(new FileInputStream(new File("phonebook.txt")));
@@ -20,7 +22,6 @@ public class Main {
             e.printStackTrace();
         }
 
-        PhoneBookList list = new PhoneBookList();
 
         while (!done){
             try {
@@ -43,10 +44,10 @@ public class Main {
             e.printStackTrace();
         }
 
-        XStream xstream = new XStream();
         xstream.alias("ListaAgendaTelefonica", PhoneBookList.class);
         xstream.alias( "DatosPersona" , PhonebookSer.class);
         xstream.addImplicitCollection(PhoneBookList.class,"list");
+
         try {
             xstream.toXML(list,new FileOutputStream("prueba10.xml"));
         } catch (FileNotFoundException e) {

@@ -1,12 +1,14 @@
 <component name="libraryTable">
-  <library name="lib">
+  <library name="XStream">
     <CLASSES>
       <root url="file://$USER_HOME$/Google Drive/Desarrollo de aplicaciones/Segundo/Acc Datos/Librerias/xstream-distribution-1.4.10-bin/xstream-1.4.10" />
       <root url="file://$USER_HOME$/Google Drive/Desarrollo de aplicaciones/Segundo/Acc Datos/Librerias/xstream-distribution-1.4.10-bin/xstream-1.4.10/lib" />
       <root url="file://$USER_HOME$/Google Drive/Desarrollo de aplicaciones/Segundo/Acc Datos/Librerias/xstream-distribution-1.4.10-bin/xstream-1.4.10/lib/xstream" />
       <root url="file://$USER_HOME$/Google Drive/Desarrollo de aplicaciones/Segundo/Acc Datos/Librerias/xstream-distribution-1.4.10-bin/xstream-1.4.10/lib/xstream-hibernate" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="file://$USER_HOME$/Google Drive/Desarrollo de aplicaciones/Segundo/Acc Datos/Librerias/gson-gson-parent-2.8.2/gson/docs/javadocs" />
+    </JAVADOC>
     <SOURCES>
       <root url="file://$USER_HOME$/Google Drive/Desarrollo de aplicaciones/Segundo/Acc Datos/Librerias/xstream-distribution-1.4.10-bin/xstream-1.4.10/lib" />
     </SOURCES>
