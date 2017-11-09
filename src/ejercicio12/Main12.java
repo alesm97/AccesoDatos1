@@ -1,13 +1,13 @@
 package ejercicio12;
 
 import java.io.*;
+
 import org.xml.sax.Attributes;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
 import org.xml.sax.helpers.DefaultHandler;
-
 
 
 public class Main12 {
@@ -32,7 +32,7 @@ public class Main12 {
 
         public GestorContenido(FileWriter writer) {
             super();
-            this.writer=writer;
+            this.writer = writer;
         }
 
         public void startDocument() {
@@ -52,16 +52,16 @@ public class Main12 {
         }
 
         public void startElement(String uri, String nombre, String nombreC, Attributes atts) {
-            try{
-                if(nombre.equals("ListaAgendaTelefonica")) {
+            try {
+                if (nombre.equals("ListaAgendaTelefonica")) {
                     writer.write(String.format("%s\n", nombre));
-                }else if(nombre.equals("DatosPersona")){
+                } else if (nombre.equals("DatosPersona")) {
                     writer.write("Contacto ->");
-                }else{
+                } else {
                     writer.write(String.format(" | %s: ", nombre));
                 }
-                for(int i = 0; i<atts.getLength();i++){
-                    writer.write(String.format("(%s %s) ",atts.getQName(i),atts.getValue(i)));
+                for (int i = 0; i < atts.getLength(); i++) {
+                    writer.write(String.format("(%s %s) ", atts.getQName(i), atts.getValue(i)));
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -69,8 +69,8 @@ public class Main12 {
 
         }
 
-        public void endElement(String uri, String nombre, String nombreC){
-            if(nombre.equals("debt")){
+        public void endElement(String uri, String nombre, String nombreC) {
+            if (nombre.equals("debt")) {
                 try {
                     writer.write(String.format("\n"));
                 } catch (IOException e) {
@@ -79,9 +79,9 @@ public class Main12 {
             }
         }
 
-        public void characters ( char[] ch, int inicio, int longitud) throws SAXException {
+        public void characters(char[] ch, int inicio, int longitud) throws SAXException {
             String car = new String(ch, inicio, longitud);
-            car = car.replaceAll("[\n\t\\s]" , "");
+            car = car.replaceAll("[\n\t\\s]", "");
             try {
                 writer.write(String.format("%s", car));
             } catch (IOException e) {

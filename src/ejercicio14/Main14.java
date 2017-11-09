@@ -20,8 +20,8 @@ public class Main14 {
         FileWriter writer = new FileWriter("prueba14.json");
 
         xstream.alias("ListaAgendaTelefonica", PhoneBookList.class);
-        xstream.alias( "DatosPersona" , PhonebookSer.class);
-        xstream.addImplicitCollection(PhoneBookList.class,"list");
+        xstream.alias("DatosPersona", PhonebookSer.class);
+        xstream.addImplicitCollection(PhoneBookList.class, "list");
 
         listadoTodas = (PhoneBookList) xstream.fromXML(new FileInputStream("prueba10.xml"));
 
