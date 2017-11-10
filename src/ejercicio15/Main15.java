@@ -53,7 +53,7 @@ public class Main15 {
         printLine();
     }
 
-    private static void printLine() {
+    public static void printLine() {
         for (int i = 0; i < 50; i++) {
             if (i != 49)
                 System.out.printf("*");

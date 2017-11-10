@@ -56,7 +56,7 @@ public class Main12 {
                 if (nombre.equals("ListaAgendaTelefonica")) {
                     writer.write(String.format("%s\n", nombre));
                 } else if (nombre.equals("DatosPersona")) {
-                    writer.write("Contacto ->");
+                    writer.write("Contacto");
                 } else {
                     writer.write(String.format(" | %s: ", nombre));
                 }
@@ -81,7 +81,8 @@ public class Main12 {
 
         public void characters(char[] ch, int inicio, int longitud) throws SAXException {
             String car = new String(ch, inicio, longitud);
-            car = car.replaceAll("[\n\t\\s]", "");
+            car = car.replaceAll("[\n\t]", "");
+            car = car.trim();
             try {
                 writer.write(String.format("%s", car));
             } catch (IOException e) {
@@ -89,5 +90,4 @@ public class Main12 {
             }
         }
     }
-
 }
