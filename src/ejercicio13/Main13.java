@@ -17,9 +17,7 @@ public class Main13 {
         Transformer transformer = TransformerFactory.newInstance().newTransformer(estilos);
         transformer.transform(datos,result);
 
-
         os.close();
-
     }
 
 
